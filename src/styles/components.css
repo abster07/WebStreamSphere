@@ -1,0 +1,48 @@
+/* src/styles/components.css
+   All hover/active states in CSS — no JS style recalculation on hover */
+
+/* ── Channel card */
+.channel-card:hover {
+  transform: translateY(-3px) translateZ(0);
+  border-color: rgba(108, 99, 255, 0.35) !important;
+  box-shadow: 0 10px 36px rgba(108, 99, 255, 0.18);
+}
+.channel-card:hover .card-glow { opacity: 1 !important; }
+.channel-card:active { transform: translateY(-1px) translateZ(0); }
+
+/* ── Channel row */
+.channel-row:hover {
+  background: rgba(108, 99, 255, 0.07) !important;
+  border-color: rgba(108, 99, 255, 0.2) !important;
+}
+
+/* ── Nav items */
+nav button:hover {
+  color: var(--text-link) !important;
+  background: rgba(108, 99, 255, 0.08) !important;
+}
+
+/* ── Category cards on hover */
+.cat-card:hover,
+.country-card:hover,
+.region-card:hover {
+  border-color: rgba(108, 99, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(108, 99, 255, 0.12);
+}
+
+/* ── EPG program */
+.epg-program:hover {
+  background: rgba(108, 99, 255, 0.16) !important;
+  border-color: rgba(108, 99, 255, 0.4) !important;
+}
+
+/* ── Icon buttons */
+button:hover:not(:disabled) { opacity: 0.88; }
+
+/* ── Fav button */
+.fav-btn:hover { color: var(--accent-danger) !important; transform: scale(1.2); }
+
+/* ── Contain paint to each card */
+.channel-card { contain: layout style; }
+.channel-row  { contain: layout style; }
