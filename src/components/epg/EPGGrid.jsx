@@ -150,7 +150,7 @@ export default memo(function EPGGrid() {
 
   const itemData = useMemo(() => ({
     channels, nowMs, setActiveChannel, navigate, colWidthMs,
-  }), [channels, nowMs, setActiveChannel, colWidthMs]);
+  }), [channels, nowMs, setActiveChannel, colWidthMs, navigate]);
 
   return (
     <div>

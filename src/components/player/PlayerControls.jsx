@@ -62,7 +62,7 @@ function DropMenu({ options, value, onChange, onClose }) {
 function SeekBar({ currentTime, duration, onSeek }) {
   const barRef = useRef(null);
   const [hoverPct, setHoverPct] = useState(null);
-  const [dragging, setDragging] = useState(false);
+  const [dragging, _setDragging] = useState(false);
   const pct = duration ? (currentTime / duration) * 100 : 0;
 
   const calcPct = useCallback((e) => {

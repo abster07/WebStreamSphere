@@ -1,14 +1,14 @@
 // src/components/player/CastModal.jsx
 // Real casting modal with PiP, AirPlay, DLNA discovery, Android Share
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import useAppStore from '../../store/useAppStore';
 import { useCasting, detectPlatform } from '../../hooks/useCasting';
 import { Spinner } from '../ui';
 
 export default function CastModal({ onClose, videoRef, streamUrl }) {
   const setCastDevice   = useAppStore(s => s.setCastDevice);
-  const clearCastDevice = useAppStore(s => s.setCastDevice);
+  // const clearCastDevice = useAppStore(s => s.setCastDevice);
   const [activeTab, setActiveTab] = useState('methods');
 
   const {

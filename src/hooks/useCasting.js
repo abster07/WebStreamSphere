@@ -7,7 +7,7 @@
 //   • Android    — Web Share API / Intent URL
 //   • Remote PiP — detachable mini player within the tab
 
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 // ── Platform detection
 export function detectPlatform() {
@@ -66,7 +66,7 @@ const DLNA_PATHS = ['/rootDesc.xml', '/device.xml', '/description.xml', '/dmr.xm
 async function probeDLNA(ip, port) {
   for (const path of DLNA_PATHS) {
     try {
-      const res = await fetch(`http://${ip}:${port}${path}`, {
+      const _res = await fetch(`http://${ip}:${port}${path}`, {
         signal: AbortSignal.timeout(800),
         mode: 'no-cors', // will opaque-succeed if device responds
       });
